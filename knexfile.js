@@ -1,4 +1,4 @@
-if (process.env.USER) require("dotenv").config();
+require("dotenv").config();
 
 const path = require("path");
 
@@ -18,10 +18,10 @@ module.exports = {
     connection: URL,
     pool: { min: 0, max: 5 },
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "api", "db", "migrations"),
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: path.join(__dirname, "api", "db", "seeds"),
     },
   },
 
@@ -30,10 +30,10 @@ module.exports = {
     connection: URL,
     pool: { min: 0, max: 5 },
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "api", "db", "migrations"),
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: path.join(__dirname, "api", "db", "seeds"),
     },
   },
 
@@ -41,10 +41,10 @@ module.exports = {
     client: "postgresql",
     connection: URL,
     migrations: {
-      directory: path.join(__dirname, "src", "db", "migrations"),
+      directory: path.join(__dirname, "api", "db", "migrations"),
     },
     seeds: {
-      directory: path.join(__dirname, "src", "db", "seeds"),
+      directory: path.join(__dirname, "api", "db", "seeds"),
     },
     useNullAsDefault: true,
   },
